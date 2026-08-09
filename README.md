@@ -6,43 +6,23 @@ Bash scripting assignments, practical lab tasks, and shell programming concepts 
 
 ---
 
-## 📋 Program 01 — `Test.sh`
+## 🖥️ How to Run & View Output
 
-**Purpose:** Brief description of what this program calculates or achieves.
+Each `.sh` file in this repo is a standalone script. To run any of them:
 
-**Concepts used:** variables, conditionals, loops (edit as per script)
+```bash
+chmod +x filename.sh
+./filename.sh
+```
 
-#### 🖥️ Terminal Output
+Example:
+
 ```bash
 $ ./Test.sh
-[input prompt]
-[final output]
+Enter your name: Sheema
+Hello Sheema, we will now start Shell Programming!
 ```
 
 ---
 
-## 📋 Program 02 — `[Script_Name].sh`
-
-**Purpose:** Brief description of what this program calculates or achieves.
-
-**Concepts used:** 
-
-#### 🖥️ Terminal Output
-```bash
-$ ./[Script_Name].sh
-[input prompt]
-[final output]
-```
-
----
-
-## 🛠️ How to Run
-
-```bash
-chmod +x script_name.sh
-./script_name.sh
-```
-
----
-
-⭐ Maintained as part of Semester 3 lab practice.
+⭐ Scripts will keep getting added here as the semester progresses.

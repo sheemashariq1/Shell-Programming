@@ -1,6 +1,6 @@
 #!/bin/bash
 
-// IF-ELSE STATEMENT
+# IF-ELSE STATEMENT
 echo "Enter Marks:"
 read marks
 if [ $marks -gt 40 ]; then
@@ -9,7 +9,7 @@ else
     echo "You have failed the exam."
 fi
 
-// ELIF STATEMENT
+# ELIF STATEMENT
 echo "Enter your age:"
 read age
 if [ $age -lt 18 ]; then
@@ -20,7 +20,7 @@ else
     echo "You are a senior citizen."        
 fi      
 
-// CASE STATEMENT
+# CASE STATEMENT
 echo "Enter a number between 1 and 3:"  
 read number
 case $number in
@@ -38,7 +38,7 @@ case $number in
         ;;      
 esac
 
-// NESTED IF STATEMENT
+# NESTED IF STATEMENT
 echo "Enter a number:"
 read num
 if [ $num -gt 0 ]; then
@@ -51,3 +51,4 @@ if [ $num -gt 0 ]; then
 else
     echo "The number is not positive."
 fi
+

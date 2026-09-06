@@ -18,6 +18,15 @@ else
     read -p "The number is between 0 and 100." response 
 fi      
 
+# AND || (OR) OPERATOR
+echo "Enter a number:"
+read num
+if [ $num -gt 0 ] && [ $num -lt 10 ] || [ $num -gt 20 ] && [ $num -lt 30 ]; then
+    read -p "The number is between 1 and 9 or between 21 and 29." response
+else
+    read -p "The number is not between 1 and 9 or between 21 and 29." response
+fi  
+
 # ! (NOT) OPERATOR
 echo "Enter a number:"
 read num            

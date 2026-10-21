@@ -26,3 +26,15 @@ addition 45 7
 echo "All the arguments are - $@"
 echo "Total number of arguments - $#"
 
+# For loop to access the values from arguments
+for arg in "$@"
+do
+    echo "Argument - $arg"
+done
+
+# Shifting the arguments
+echo "All the arguments are - $@"
+shift 2
+echo "All the arguments after shifting are - $@"    
+
+

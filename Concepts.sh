@@ -102,13 +102,23 @@ echo "The name of the script without the path and without the extension is $(bas
 logger "This is a log message from my script" 
 
 # To view this system log file (if present; the path varies by Linux distribution):
-sudo less /var/log/messages
+# sudo less /var/log/messages
 
 # Run script in background
-nohup ./Concepts.sh &
+# nohup ./Concepts.sh &
 
 #      TO AUTOMATE OUR SCRIPT
 # At or Crontab
 
 # At Command
 # For scheduling only one time
+#    at 12:10 PM
+#    cat file1.txt
+#    ctrl+D
+
+# atrl            # To check scheduled job
+# atrm <id>       # To remove the scheduled job
+
+# Crontab Command
+#    crontab -l   # To check the existing jobs
+#    crontab -e   # To add new job

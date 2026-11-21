@@ -50,6 +50,7 @@ done
 
 # Exit Status
 # To check the exit status of the last command executed
+ls Names.txt
 echo "The exit status of the last command is $?"
 # If the last command was successful, the exit status will be 0, otherwise it will be a non-zero value.
 
@@ -65,9 +66,8 @@ fi
 
 # To check the connectivity to a specific host entered by the user    
 read -p "Which site do you want to ping? " site
-ping -c 1 $site
-sleep 1s
-if [[$? -eq 0]]
+ping -c 1 "$site"
+if [[ $? -eq 0 ]]
 then
   echo "Successfully connected to $site"
 else
@@ -107,8 +107,8 @@ logger "This is a log message from my script"
 # Run script in background
 # nohup ./Concepts.sh &
 
-#      TO AUTOMATE OUR SCRIPT
-# At or Crontab
+# To automate a script
+#    Use at or crontab
 
 # At Command
 # For scheduling only one time
@@ -116,7 +116,7 @@ logger "This is a log message from my script"
 #    cat file1.txt
 #    ctrl+D
 
-# atrl            # To check scheduled job
+# atq             # To check scheduled job      
 # atrm <id>       # To remove the scheduled job
 
 # Crontab Command

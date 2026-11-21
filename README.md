@@ -8,7 +8,7 @@ Bash scripting assignments, practical lab tasks, and shell programming concepts 
 
 ## 🖥️ How to Run & View Output
 
-Each `.sh` file in this repo is a standalone script. To run any of them:
+Needs Linux or WSL with bash. Each `.sh` file in this repo is a standalone script. To run any of them:
 
 ```bash
 chmod +x filename.sh
@@ -25,4 +25,13 @@ Hello Sheema, we will now start Shell Programming!
 
 ---
 
-⭐ Scripts will keep getting added here as the semester progresses.
+## 📂 What is inside
+
+- Basics: variables, arithmetic, strings, arrays
+- Control flow: conditional statements, logical operators, loops
+- Functions, file commands and debugging
+- Lab_Assignment.sh for the semester lab work
+- Concepts.sh for extra shell concepts
+- Projects/ with bigger scripts (see the README inside)
+
+⭐ More scripts will be added as the course goes on.

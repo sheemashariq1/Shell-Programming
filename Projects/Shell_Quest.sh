@@ -2,7 +2,7 @@
 # ============================================================
 #  SHELL QUEST - A text-based RPG written in pure Bash
 #  Concepts used: case, functions, arrays, $(( )), $RANDOM, while loops, return codes, [[ ]] and (( ))
-#  Run:  chmod +x shell_quest.sh && ./shell_quest.sh
+#  Run:  chmod +x Shell_Quest.sh && ./Shell_Quest.sh
 # ============================================================
 
 # ---------- GAME STATE (global variables) ----------
@@ -103,7 +103,7 @@ combat() {
 
         case $choice in
             1)
-                dmg=$(( ATTACK + RANDOM % 6 ))          # 8..13 base
+                dmg=$(( ATTACK + RANDOM % 6 ))          # base attack plus 0 to 5
                 if (( RANDOM % 100 < 15 )); then        # 15% crit
                     dmg=$(( dmg * 2 ))
                     echo "CRITICAL HIT!"

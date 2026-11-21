@@ -4,13 +4,12 @@
 # free -mt | grep "Total"
 # free -mt | grep "Total" | awk '{print $4}'
 
-FREE_SPACE=$(free -mt | grep "Total" | awk '{print $4}')
+FREE_SPACE=$(free -m | awk '/^Mem:/ {print $7}')
+THRESHOLD=500
 
-Threshhold=500
-
-if [[ $FREE_SPACE -lt $Threshhold ]]
+if [[ $FREE_SPACE -lt $THRESHOLD ]]
 then 
-echo " WARNING, RAM is running low"
+echo "WARNING, RAM is running low"
 else
-echo " RAM Space is suffient - $FREE_SPACE "
+echo "RAM is sufficient - ${FREE_SPACE} MB free"
 fi

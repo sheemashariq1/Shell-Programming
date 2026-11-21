@@ -1,8 +1,9 @@
+#!/bin/bash
+
 # =====================================================
 # DISK SPACE MONITORING AND EMAIL ALERT SCRIPT
 # =====================================================
 
-#!/bin/bash
 
 # Show disk space usage in the default units.
 # df
@@ -31,20 +32,22 @@
 # awk extracts the row for "/" and prints the usage percentage.
 # tr removes the "%" symbol so Bash can compare the value numerically.
 
-FU=$(df -H | awk '$NF == "/" {print $5}' | tr -d '%')
+FU=$(df -P / | awk 'NR==2 {print $5}' | tr -d '%')
+THRESHOLD=80
+
 # Display current disk usage
 echo "Disk usage is ${FU}%"
 
 # STEP 3: SET THE EMAIL RECIPIENT
 # Replace this address with the Gmail address that should receive disk space alerts.
-TO="sheemashariq10@gmail.com"
+TO=${1:?Usage: $0 email@example.com}
 
 # STEP 4: CHECK THE DISK USAGE THRESHOLD
 # -ge means "greater than or equal to".
 # If usage is 80% or higher, send an email alert.
 # Otherwise, display "All Good".
 
-if [[ $FU -ge 1 ]]; then
+if [[ $FU -ge $THRESHOLD ]]; then
 
     # STEP 5: SEND THE EMAIL ALERT
     # echo creates the email message body.

@@ -84,3 +84,19 @@ head -n 2 mbacourse.txt management.txt
 
 # Q18: To display lines from the 5th line till the end of mbacourse.txt.
 tail -n +5 mbacourse.txt
+
+# Q19: To check when we enter a name ,it is a file, directory, or something else.
+echo -n "Enter the name: "
+read f
+
+if test -f "$f"
+then
+    echo "$f is a file"
+else
+    if test -d "$f"
+    then
+        echo "$f is a directory"
+    else
+        echo "$f is something else"
+    fi
+fi

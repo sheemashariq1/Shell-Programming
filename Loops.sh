@@ -89,3 +89,39 @@ do
   echo "This is an infinite for loop. Press Ctrl+C to stop."
   sleep 2s
 done
+
+# Fibonacci Series
+echo "How many terms?"
+read n
+a=0
+b=1
+for ((i = 0; i < n; i++))
+do
+    echo -n "$a "
+    next=$((a + b))
+    a=$b
+    b=$next
+done
+echo
+
+#The following script reverses a number, calculates the sum of its digits,
+# and checks whether the number is a palindrome.
+
+echo "Enter a number"
+read n
+orig=$n
+rev=0
+sum=0
+while [ $n -gt 0 ]; do
+d=$((n % 10))
+rev=$((rev * 10 + d))
+sum=$((sum + d))
+n=$((n / 10))
+done
+echo "Reverse : $rev"
+echo "Digit sum : $sum"
+if [ $rev -eq $orig ]; then
+echo "$orig is a palindrome"
+else
+echo "$orig is not a palindrome"
+fi

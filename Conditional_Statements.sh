@@ -38,6 +38,19 @@ case $number in
         ;;      
 esac
 
+# Another Example 
+# This checks whether the input is a single letter. If the user enters multiple letters, such as abc, it will display Not a letter.
+echo "Enter a single letter"
+read ch
+case $ch in 
+     [aeiouAEIOU]) 
+          echo "$ch is a vowel" ;;
+     [a-zA-Z]) 
+          echo "$ch is a consonant" ;;
+     *) 
+          echo "Not a letter" ;;
+esac
+
 # NESTED IF STATEMENT
 echo "Enter a number:"
 read num
